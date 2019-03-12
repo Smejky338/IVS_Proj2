@@ -1,0 +1,51 @@
+zadání: http://ivs.fit.vutbr.cz/projekt-2_tymova_spoluprace2018-19.html
+jazyk: Python3
+jazyk dokumentace: CZ/SK
+Termíny:
+
+úkoly:
+	testy-TDD
+	matematická knihovna +-*/ ^ rt() (priority operací? asi ne, stačí basic s 2 operandy), 
+		profiling(výběrová směrodat. odchylka)
+	GUI (kopírovatelný výsledek)
+	nápověda
+	uživatelská dokumentace 
+	programátorská dokumentace - všichni držet se Doxyfile
+	makefile
+	README - spec.prostředí a jak zprovoznit
+	
+	instalátor
+
+začátek:
+	GIThub-zprovoznit, vyzkoušet fungování verzí a změn
+	testy - pytest? googletest, jestli jde?
+	začátek GUI
+
+2.etapa:
+	makefile
+	matematické funkce
+	nevázáno - mockup GUI s vědeckým módem, grafy, "užitečné" funkce (BMI, stopky,..)-.png
+	
+3.etapa:
+	GUI
+	
+	2 implementace
+	2 testy
+	
+konec:
+	profiling-mimo hlavní část projektu
+	uživatelská dokumentace
+	nápověda-v GUI
+	un/installer
+	doxyfile
+	
+průběžně:
+	dodržovat doxy dokuentace
+	testovat
+	statistika???
+
+komunikační kanály: messenger, na termíny Doodle, sdílený gDocs na bugy, TODO a poznámky
+
+správa verzí+host: github
+přidání ostatních:
+https://github.com/users/Smejky338/projects/1/settings/users
