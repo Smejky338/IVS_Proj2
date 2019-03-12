@@ -4,16 +4,23 @@ jazyk dokumentace: CZ/SK
 Termíny:
 
 úkoly:
-	testy-TDD
-	matematická knihovna +-*/ ^ rt() (priority operací? asi ne, stačí basic s 2 operandy), 
+	testy-TDD pro mat.knihovnu
+	matematická knihovna +-*/ ^ root() (priority operací? asi ne, stačí basic s 2 operandy), 
 		profiling(výběrová směrodat. odchylka)
-	GUI (kopírovatelný výsledek)
-	nápověda
+	GUI 
+		-kopírovatelný výsledek
+		-nápověda
 	uživatelská dokumentace 
+		se screenshoty atp, prostě pro blbýho
 	programátorská dokumentace - všichni držet se Doxyfile
+		/** komentář 
+			/brief krátký popis do pár slov
+			/param x komentář parametru
+			/return komentář návratové hodnoty
+		*/
 	makefile
+		-viz zadání
 	README - spec.prostředí a jak zprovoznit
-	
 	instalátor
 
 začátek:
@@ -25,15 +32,15 @@ začátek:
 	makefile
 	matematické funkce
 	nevázáno - mockup GUI s vědeckým módem, grafy, "užitečné" funkce (BMI, stopky,..)-.png
+				^ bude lepší dělat až po vzhledu naší základní verze, ať se to vzhledově moc neliší
 	
 3.etapa:
-	GUI
+	GUI - doladit, ověřit správnou komunikaci s mat.knihovnou
 	
 	2 implementace
 	2 testy
-	
 konec:
-	profiling-mimo hlavní část projektu
+	profiling-mimo hlavní část projektu, závislá na mat.knihovně
 	uživatelská dokumentace
 	nápověda-v GUI
 	un/installer
