@@ -84,5 +84,6 @@ všichni:
 komunikační kanály: Discord - aktuálně pracující jsou v hlasové místnosti
 					messenger, na termíny Doodle, GitHub na TODO a poznámky, bugy
 
-správa verzí: Git na GitHubu - projekt: https://github.com/users/Smejky338/projects/1
-					 - repozitář: https://github.com/Smejky338/IVS_Proj2
+správa verzí: Git na GitHubu - projekt: https://github.com/Smejky338/IVS_Proj2/projects/1/
+					 		- repozitář: https://github.com/Smejky338/IVS_Proj2
+přístup už. ivskontrola udělen
