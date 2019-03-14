@@ -1,20 +1,7 @@
 zadání: http://ivs.fit.vutbr.cz/projekt-2_tymova_spoluprace2018-19.html
 jazyk: Python3
 jazyk dokumentace: CZ/SK
-/*
-- 10.3.2017 (Project plan)
-	- 13.3.2017 (Create readme file, Initialize project in Visual Studio (C# .NET WPF))
-	- 17.3.2017 (Create interface for math library, GUI interface)
-	- 24.3.2017 (Create tests for math library by Interface IMath)
-	- 31.3.2017 (Implementation of math library by interface IMath and Tests)
-	- 7.4.2017 (Standard deviation, Link GUI Interface with Math library)
-	- 14.4.2017 (Program documentation in Doxygen, Mockup GUI, Application un/installer, Profiling
-		standard deviation)
-	- 21.4.2017 (User documentation, Create Makefile)
-	- 24.4.2017 (Create rating of team members hodnoceni.txt, Report about differences between the
-		project and reality reality.txt, Create file odevzdani.txt)
-	- 2.5.2017 (Create files xloginNN_problemy.txt, PDF presentation)
-	*/
+
 Termíny:
 	plán projektu: 14.3. 2019
 	17.3. inicializace projektu, příprava repozitářů
