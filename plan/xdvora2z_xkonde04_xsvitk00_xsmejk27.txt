@@ -1,7 +1,63 @@
 zadání: http://ivs.fit.vutbr.cz/projekt-2_tymova_spoluprace2018-19.html
 jazyk: Python3
 jazyk dokumentace: CZ/SK
+/*
+- 10.3.2017 (Project plan)
+	- 13.3.2017 (Create readme file, Initialize project in Visual Studio (C# .NET WPF))
+	- 17.3.2017 (Create interface for math library, GUI interface)
+	- 24.3.2017 (Create tests for math library by Interface IMath)
+	- 31.3.2017 (Implementation of math library by interface IMath and Tests)
+	- 7.4.2017 (Standard deviation, Link GUI Interface with Math library)
+	- 14.4.2017 (Program documentation in Doxygen, Mockup GUI, Application un/installer, Profiling
+		standard deviation)
+	- 21.4.2017 (User documentation, Create Makefile)
+	- 24.4.2017 (Create rating of team members hodnoceni.txt, Report about differences between the
+		project and reality reality.txt, Create file odevzdani.txt)
+	- 2.5.2017 (Create files xloginNN_problemy.txt, PDF presentation)
+	*/
 Termíny:
+	plán projektu: 14.3. 2019
+	17.3. inicializace projektu, příprava repozitářů
+	28.3. návrh rozhraní matematické knihovny vč. chybových stavů
+	31.3. TDD testy, README
+	7. 4. GUI - ať to vypadá jak kalkulačka, implementace matematické knihovny
+	12.4. linkování s GUI
+	14.4. dokumentace, dodělání README, makefile, instalátor, profiling vč. protokolu
+	21.4. mockupy, uživatelská příručka(pdf, snímek obr.)+ nápověda v GUI
+	23.4. skutecnost.txt, hodnoceni.txt, snímky obr.debugerru
+	24.4.7:00 odevzdání!
+	2.5.7:00 záznam problémů
+
+přidělení: 
+	xsmejk27 Jan Smejkal:
+		- inicializace projektu
+		- implementace matematické knihovny
+		- linkování s GUI
+		- profiling vč. protokolu
+		- mockupy
+	xdvora2z Josef Dvořák:
+		- TDD testy
+		- README
+		- testování matematické knihovny
+		- debugger
+		- profiling vč. protokolu
+	xsvitk00 Veronika Svítková:
+		- TDD testy
+		- implementace matematické knihovny
+		- prog.dokumentace v Doxygen
+		- uživatelská příručka
+	xkonde04 Ondrej Kondek:
+		- rozhraní matematické knihovny
+		- GUI
+		- nápověda v GUI
+		- linkování s GUI
+		- instalátor
+		- mockupy
+		- makefile
+
+všichni:
+	průběžně dodržovat dokumentaci pro Doxygen
+	skutecnost.txt, hodnoceni.txt, 
 
 úkoly:
 	testy-TDD pro mat.knihovnu
@@ -12,47 +68,21 @@ Termíny:
 		-nápověda
 	uživatelská dokumentace 
 		se screenshoty atp, prostě pro blbýho
-	programátorská dokumentace - všichni držet se Doxyfile
-		/** komentář 
-			/brief krátký popis do pár slov
-			/param x komentář parametru
-			/return komentář návratové hodnoty
-		*/
+	programátorská dokumentace - všichni držet se Doxyfile:
+		##
+		#	@brief krátký popis do pár slov
+		#	@param x komentář parametru
+		#	@return komentář návratové hodnoty
+		
 	makefile
 		-viz zadání
-	README - spec.prostředí a jak zprovoznit
+	README - spec.prostředí a jak zprovoznit, licence
 	instalátor
+	dodržovat doxy dokumentace
+	mockup další funkce-BMI?
 
-začátek:
-	GIThub-zprovoznit, vyzkoušet fungování verzí a změn
-	testy - pytest? googletest, jestli jde?
-	začátek GUI
+komunikační kanály: Discord - aktuálně pracující jsou v hlasové místnosti
+					messenger, na termíny Doodle, GitHub na TODO a poznámky, bugy
 
-2.etapa:
-	makefile
-	matematické funkce
-	nevázáno - mockup GUI s vědeckým módem, grafy, "užitečné" funkce (BMI, stopky,..)-.png
-				^ bude lepší dělat až po vzhledu naší základní verze, ať se to vzhledově moc neliší
-	
-3.etapa:
-	GUI - doladit, ověřit správnou komunikaci s mat.knihovnou
-	
-	2 implementace
-	2 testy
-konec:
-	profiling-mimo hlavní část projektu, závislá na mat.knihovně
-	uživatelská dokumentace
-	nápověda-v GUI
-	un/installer
-	doxyfile
-	
-průběžně:
-	dodržovat doxy dokuentace
-	testovat
-	statistika???
-
-komunikační kanály: messenger, na termíny Doodle, sdílený gDocs na bugy, TODO a poznámky
-
-správa verzí+host: github
-přidání ostatních:
-https://github.com/users/Smejky338/projects/1/settings/users
+správa verzí: Git na GitHubu - projekt: https://github.com/users/Smejky338/projects/1
+					 - repozitář: https://github.com/Smejky338/IVS_Proj2
