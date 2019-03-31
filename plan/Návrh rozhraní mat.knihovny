@@ -1,7 +1,58 @@
+#pozn. k @return - jdou vubec vyjimky implementovat u trivialita jako 0 asi zbytecne
+
 ##  Plus(a, b)
-#   Provede a + b a vraci. Pracuje i se zapornymi cisly.
+#   Provede a + b a vraci vysledek. Pracuje i se zapornymi a desetinymi cisly.
 #	@brief Aritmeticke plus
 #	@param a prvni operand
 #	@param b druhy operand
-#	@return vysledek, pokud dojde k neocekavanemu stavu/chybe, vraci 0
+#	@return vysledek souctu, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError nebo Exception)
 
+##  Minus(a, b)
+#   Provede a - b a vraci vysledek. Pracuje i se zapornymi a desetinymi cisly.
+#	@brief Aritmeticke minus
+#	@param a prvni operand
+#	@param b druhy operand
+#	@return vysledek rozdilu, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError nebo Exception)
+
+##  Multiply(a, b)
+#   Provede a * b a vraci vysledek. Pracuje i se zapornymi a desetinymi cisly.
+#	@brief Aritmeticke krat
+#	@param a prvni operand
+#	@param b druhy operand
+#	@return vysledek nasobeni, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError nebo Exception)
+
+##  Divide(a, b)
+#   Provede a / b a vraci vysledek. Pracuje i se zapornymi a desetinymi cisly.
+#	@brief Aritmeticke deleno
+#	@param a prvni operand
+#	@param b druhy operand - nesmi byt 0, vyhodi vyjimku (viz return)
+#	@return vysledek deleni, pokud dojde k neocekavanemu stavu, chybe ci deleni nulou, vyhodi vyjimku (ValueError nebo Exception). Zbytek neni - deleni je desetinne.
+
+#POZOR! jmenuje se to Factorial, ne Faktorial!
+##  Factorial(a)
+#   Provede a! (faktorial) a vraci vysledek. Pracuje i se zapornymi a desetinymi cisly.
+#	@brief Faktorial (a*(a-1)*..)
+#	@param a prvni operand
+#	@return vysledek faktorialu, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError nebo Exception)
+
+##  Power(x, y)
+#   Provede x * y a vraci vysledek. Pracuje i se zapornymi cisly, exponent je prirozeny.
+#	@brief umocnovani s prirozenym exponentem
+#	@param x prvni operand - zaklad, desetinne cislo
+#	@param y druhy operand - exponent, prirozene(cele kladne) cislo
+#	@return vysledek umocnovani, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError nebo Exception)
+
+##  Odmocnina(x, y)
+#   Provede odmocninu (a^(1/n)) a vraci vysledek. Pracuje s desetinymi cisly.
+#	@brief Obecna odmocnina
+#	@param x prvni operand - zaklad - vetsi jak 0
+#	@param y druhy operand - uroven odmocniny (to, na kolikatou to je odmocnina) - bez omezeni
+#	@return vysledek odmocniny, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError u zaklad<=0 nebo Exception)
+
+#TODO
+##  Dalsi(x, y)
+#   Provede dalsi funkci - jakou??
+#	@brief Dalsi funkce - 
+#	@param x prvni operand
+#	@param y druhy operand
+#	@return vysledek 
