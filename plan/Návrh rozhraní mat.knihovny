@@ -1,0 +1,7 @@
+##  Plus(a, b)
+#   Provede a + b a vraci. Pracuje i se zapornymi cisly.
+#	@brief Aritmeticke plus
+#	@param a prvni operand
+#	@param b druhy operand
+#	@return vysledek, pokud dojde k neocekavanemu stavu/chybe, vraci 0
+
