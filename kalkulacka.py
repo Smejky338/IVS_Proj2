@@ -1,4 +1,3 @@
 #bzum bzum
 #breke-keke
-
-#ondrej test git
+print ('ahoj')
