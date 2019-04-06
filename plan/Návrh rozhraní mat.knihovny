@@ -36,7 +36,7 @@
 ##  Factorial(a)
 #   Provede a! (faktorial) (a*(a-1)*..) a vraci vysledek. Pracuje s prirozenymi cisly a 0.
 #	@brief Faktorial a!
-#	@param prirozene cislo a 0 (0,1,..n)
+#	@param a (0,1,2,..,n)
 #	@return vysledek faktorialu, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError nebo Exception)
 
 ##  Power(x, y)
@@ -53,10 +53,8 @@
 #	@param y uroven odmocniny (to, na kolikatou to je odmocnina) - bez omezeni
 #	@return vysledek odmocniny, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError u zaklad<=0 nebo Exception)
 
-#TODO
-##  Dalsi(x, y)
-#   Provede dalsi funkci - jakou??
-#	@brief Dalsi funkce - 
+##  Log(x)
+#   Vypocte dekadicky logaritmus a vrati vysledek. 
+#	@brief Dekadicky logaritmus 
 #	@param x prvni operand
-#	@param y druhy operand
-#	@return vysledek 
+#	@return vysledek logaritmu, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError u zaklad<=0 nebo Exception) 
