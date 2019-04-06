@@ -100,5 +100,17 @@ def test_Odmocnina():
     assert mat_knihovna.Odmocnina(1000000,8)==5.623413251903491
     assert mat_knihovna.Odmocnina(1000000,-8)==0.1778279410038923
     with pytest.raises(ValueError):
-        mat_knihovna(-5,2)
-        mat_knihovna(-5,-2)
+        mat_knihovna.Odmocnina(-5,2)
+        mat_knihovna.Odmocnina(-5,-2)
+
+def test_Log():
+    assert mat_knihovna.Log(1) == 0
+    assert mat_knihovna.Log(10)==1
+    assert mat_knihovna.Log(1000)==3   
+    assert mat_knihovna.Log(15)==1.1760912590556813
+    assert mat_knihovna.Log(5.25)==0.7201593034059569
+    assert mat_knihovna.Log(0.25)==-0.6020599913279624
+    assert mat_knihovna.Log(12000)==4.079181246047625
+    with pytest.raises(ValueError):
+        mat_knihovna.Log(0)
+        mat_knihovna.Log(-15)

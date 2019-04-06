@@ -30,7 +30,7 @@
 
 #POZOR! jmenuje se to Factorial, ne Faktorial!
 ##  Factorial(a)
-#   Provede a! (faktorial) a vraci vysledek. Pracuje i se zapornymi a desetinymi cisly.
+#   Provede a! (faktorial) a vraci vysledek. 
 #	@brief Faktorial (a*(a-1)*..)
 #	@param a prvni operand
 #	@return vysledek faktorialu, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError nebo Exception)
@@ -49,10 +49,8 @@
 #	@param y druhy operand - uroven odmocniny (to, na kolikatou to je odmocnina) - bez omezeni
 #	@return vysledek odmocniny, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError u zaklad<=0 nebo Exception)
 
-#TODO
-##  Dalsi(x, y)
-#   Provede dalsi funkci - jakou??
-#	@brief Dalsi funkce - 
+##  Log(x)
+#   Vypocte dekadicky logaritmus a vrati vysledek. 
+#	@brief Dekadicky logaritmus 
 #	@param x prvni operand
-#	@param y druhy operand
-#	@return vysledek 
+#	@return vysledek logaritmu, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError u zaklad<=0 nebo Exception) 
