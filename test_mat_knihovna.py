@@ -39,10 +39,10 @@ def test_Multiply():
     assert mat_knihovna.Multiply(0,0)==0
     assert mat_knihovna.Multiply(5,5)==25
     assert mat_knihovna.Multiply(2018,2019)==4074342
-    assert mat_knihovna.Divide(526894,58965)==31068304710
+    assert mat_knihovna.Multiply(526894,58965)==31068304710
     assert mat_knihovna.Multiply(5,0.2)==1
-    assert mat_knihovna.Divide(0.3425,0.12345)==0.042281625
-    assert mat_knihovna.Divide(0.3425,-0.12345)==-0.042281625
+    assert mat_knihovna.Multiply(0.3425,0.12345)==0.042281625
+    assert mat_knihovna.Multiply(0.3425,-0.12345)==-0.042281625
 
 def test_Divide():
     assert mat_knihovna.Divide(25,5)==5
