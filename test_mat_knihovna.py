@@ -1,7 +1,7 @@
 #Spusteni pres prikazovou radku:
 #pytest [Param] test_mat_knihovna.py 
 
-import mat_knihovna.py
+import mat_knihovna
 import pytest
 
 def test_Plus():
