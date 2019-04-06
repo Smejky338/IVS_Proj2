@@ -1,4 +1,8 @@
-#pozn. k @return - jdou vubec vyjimky implementovat u trivialita jako 0 asi zbytecne
+#navrh rozhrani mat.knihovny, IVS Proj2
+#@author: xsmejk27, xsvitk00
+#pozn. k @return - vyjimky u trivialit jako plus asi nenastanou, nebo ano?
+# v Pythonu 3+(mozna uz 2.4+) nemusime resit pouzivani long/int - resi se to samo
+
 
 ##  Plus(a, b)
 #   Provede a + b a vraci vysledek. Pracuje i se zapornymi a desetinymi cisly.
@@ -30,23 +34,23 @@
 
 #POZOR! jmenuje se to Factorial, ne Faktorial!
 ##  Factorial(a)
-#   Provede a! (faktorial) a vraci vysledek. 
-#	@brief Faktorial (a*(a-1)*..)
-#	@param a prvni operand
+#   Provede a! (faktorial) (a*(a-1)*..) a vraci vysledek. Pracuje s prirozenymi cisly a 0.
+#	@brief Faktorial a!
+#	@param a (0,1,2,..,n)
 #	@return vysledek faktorialu, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError nebo Exception)
 
 ##  Power(x, y)
 #   Provede x * y a vraci vysledek. Pracuje i se zapornymi cisly, exponent je prirozeny.
 #	@brief umocnovani s prirozenym exponentem
-#	@param x prvni operand - zaklad, desetinne cislo
-#	@param y druhy operand - exponent, prirozene(cele kladne) cislo
+#	@param x zaklad, desetinne cislo
+#	@param y exponent, prirozene(cele kladne) cislo
 #	@return vysledek umocnovani, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError nebo Exception)
 
 ##  Odmocnina(x, y)
 #   Provede odmocninu (a^(1/n)) a vraci vysledek. Pracuje s desetinymi cisly.
 #	@brief Obecna odmocnina
-#	@param x prvni operand - zaklad - vetsi jak 0
-#	@param y druhy operand - uroven odmocniny (to, na kolikatou to je odmocnina) - bez omezeni
+#	@param x zaklad - vetsi jak 0
+#	@param y uroven odmocniny (to, na kolikatou to je odmocnina) - bez omezeni
 #	@return vysledek odmocniny, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError u zaklad<=0 nebo Exception)
 
 ##  Log(x)
