@@ -35,7 +35,7 @@ button_fact.config(width=5, height=2)
 button_fact.place(x=4+55+2+55+2+55+2,y=70)
 
 #Button 7
-button_7=Button(calc, text='7', fg='black', bg='gray83', font=('comicsans', 12), command=lambda :test())
+button_7=Button(calc, text='7', fg='black', bg='gray83', font=('comicsans', 12), command=lambda: test())
 button_7.config(width=5, height=2)
 button_7.place(x=4,y=70+50+2)
 
