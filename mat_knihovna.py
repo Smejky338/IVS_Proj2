@@ -27,6 +27,8 @@ def Factorial(a):
         return a*Factorial(a-1)
 
 def Power(x, y):
+    if x==0 and y<0:
+        raise ZeroDivisionError("Pri zaklade nula nemoze byt zaporny exponent!")
     return x ** y
 
 def Odmocnina(x, y):
