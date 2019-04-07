@@ -22,8 +22,6 @@ def Factorial(a):
     return math.factorial(a)
 
 def Power(x, y):
-    if a<0 or isinstance(a, float):
-        raise ValueError("Exponent musi byt kladne cele cislo!")
     return x ** y
 
 def Odmocnina(x, y):

@@ -80,28 +80,24 @@ def test_Power():
     assert mat_knihovna.Power(5,5)==3125
     assert mat_knihovna.Power(5,-5)==0.00032
     assert mat_knihovna.Power(5,10)==9765625
-    assert mat_knihovna.Power(18,18)==3.934640807529654e+22
+    assert mat_knihovna.Power(18,18)==39346408075296537575424
     assert mat_knihovna.Power(18,-18)==2.5415280553343456e-23
-    with pytest.raises(ValueError):
+    assert mat_knihovna.Power(-10,-3.5)==-0.00031622776601683794
+    assert mat_knihovna.Power(-10,3.5)==-3162.2776601683795
+    with pytest.raises(ZeroDivisionError):
         mat_knihovna.Power(0,-2)
-        mat_knihovna.Power(-10,-3.5)
-        mat_knihovna.Power(-10,3.5)
 
 def test_Odmocnina():
     assert mat_knihovna.Odmocnina(0,2)==0
     assert mat_knihovna.Odmocnina(1,20)==1
-    assert mat_knihovna.Odmocnina(1,-20)==1
     assert mat_knihovna.Odmocnina(4,2)==2
-    assert mat_knihovna.Odmocnina(4,-2)==0.5
     assert mat_knihovna.Odmocnina(8,3)==2
-    assert mat_knihovna.Odmocnina(8,-3)==0.5
     assert mat_knihovna.Odmocnina(0.58,2)==0.7615773105863908
-    assert mat_knihovna.Odmocnina(0.58,-2)==1.3130643285972257
     assert mat_knihovna.Odmocnina(1000000,8)==5.623413251903491
-    assert mat_knihovna.Odmocnina(1000000,-8)==0.1778279410038923
     with pytest.raises(ValueError):
         mat_knihovna.Odmocnina(-5,2)
         mat_knihovna.Odmocnina(-5,-2)
+        mat_knihovna.Odmocnina(1,-20)
 
 def test_Log():
     assert mat_knihovna.Log(1) == 0
