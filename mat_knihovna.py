@@ -19,7 +19,12 @@ def Divide(a, b):
 def Factorial(a):
     if a<0 or isinstance(a, float):
         raise ValueError("Faktorial je definovany len pre prirodzene cisla a nulu!")
-    return math.factorial(a)
+    if a>990:
+        raise ValueError("Factorial pracuje len s cislami do 990!")
+    if a==0:
+        return 1
+    else:
+        return a*Factorial(a-1)
 
 def Power(x, y):
     return x ** y
