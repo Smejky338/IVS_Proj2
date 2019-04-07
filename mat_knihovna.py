@@ -18,17 +18,24 @@ def Divide(a, b):
 
 def Factorial(a):
     if a<0 or isinstance(a, float):
-        raise ValueError("Faktorial je definovany len pre kladne cele cisla!")
-    return math.factorial(a)
+        raise ValueError("Faktorial je definovany len pre prirodzene cisla a nulu!")
+    if a>990:
+        raise ValueError("Factorial pracuje len s cislami do 990!")
+    if a==0:
+        return 1
+    else:
+        return a*Factorial(a-1)
 
 def Power(x, y):
+    if x==0 and y<0:
+        raise ZeroDivisionError("Pri zaklade nula nemoze byt zaporny exponent!")
     return x ** y
 
 def Odmocnina(x, y):
     if x<0 and (y%2 ==0):
         raise ValueError("Zaklad nemoze byt zaporny pre parne odmocniny!")
     if y<=0 or isinstance(y, float):
-        raise ValueError("Odmocnina musi byt kladne cele cislo!")
+        raise ValueError("Odmocnina musi byt prirodzene cislo!")
     return x ** (1/y)
 
 def Log(x):
