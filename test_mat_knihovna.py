@@ -70,6 +70,7 @@ def test_Factorial():
         mat_knihovna.Factorial(-5)
         mat_knihovna.Factorial(-5.85)
         mat_knihovna.Factorial(5.123456789)
+        mat_knihovna.Factorial(1000)
 
 def test_Power():
     assert mat_knihovna.Power(0,0)==1
