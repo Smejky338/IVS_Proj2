@@ -82,8 +82,8 @@ def test_Power():
     assert mat_knihovna.Power(5,10)==9765625
     assert mat_knihovna.Power(18,18)==39346408075296537575424
     assert mat_knihovna.Power(18,-18)==2.5415280553343456e-23
-    assert mat_knihovna.Power(-10,-3.5)==-0.00031622776601683794
-    assert mat_knihovna.Power(-10,3.5)==-3162.2776601683795
+    assert mat_knihovna.Power(10,-3.5)==0.00031622776601683794
+    assert mat_knihovna.Power(10,3.5)==3162.2776601683795
     with pytest.raises(ZeroDivisionError):
         mat_knihovna.Power(0,-2)
 
