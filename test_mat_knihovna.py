@@ -76,16 +76,14 @@ def test_Power():
     assert mat_knihovna.Power(5,0)==1
     assert mat_knihovna.Power(-5,0)==1
     assert mat_knihovna.Power(5,1)==5
-    assert mat_knihovna.Power(5,-1)==0.2
     assert mat_knihovna.Power(5,5)==3125
-    assert mat_knihovna.Power(5,-5)==0.00032
+    assert mat_knihovna.Power(-5,5)==-3125
     assert mat_knihovna.Power(5,10)==9765625
     assert mat_knihovna.Power(18,18)==39346408075296537575424
-    assert mat_knihovna.Power(18,-18)==2.5415280553343456e-23
-    assert mat_knihovna.Power(10,-3.5)==0.00031622776601683794
-    assert mat_knihovna.Power(10,3.5)==3162.2776601683795
-    with pytest.raises(ZeroDivisionError):
-        mat_knihovna.Power(0,-2)
+    with pytest.raises(ValueError):
+        assert mat_knihovna.Power(10,3.5)
+        assert mat_knihovna.Power(10,-3.5)
+        assert mat_knihovna.Power(5,-1)
 
 def test_Odmocnina():
     assert mat_knihovna.Odmocnina(0,2)==0
