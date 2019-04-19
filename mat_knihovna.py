@@ -1,4 +1,5 @@
 #implementacia mat. kniznice
+
 import math
 
 def Plus(a, b):
@@ -26,9 +27,10 @@ def Factorial(a):
         return a*Factorial(a-1)
 
 def Power(x, y):
-    if x<0 or isinstance(x, float)
+    if y<0 or isinstance(y, float):
         raise ValueError("Power pracuje len s prirodzenym exponentom!")
     return x ** y
+
 
 def Odmocnina(x, y):
     if x<0 and (y%2 ==0):
