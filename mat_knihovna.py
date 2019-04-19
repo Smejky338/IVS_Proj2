@@ -1,5 +1,4 @@
 #implementacia mat. kniznice
-
 import math
 
 def Plus(a, b):
@@ -42,6 +41,3 @@ def Log(x):
     if x <= 0:
         raise ValueError("Zaklad logaritmu musi byt kladne cislo!")
     return math.log10(x)
-
-
-
