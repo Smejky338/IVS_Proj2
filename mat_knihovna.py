@@ -1,6 +1,5 @@
 #implementacia mat. kniznice
 
-
 import math
 
 def Plus(a, b):
