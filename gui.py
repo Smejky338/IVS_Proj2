@@ -1,122 +1,138 @@
 from tkinter import *
 import main
 
-calc = Tk()
-calc.title('Kalkulacka')
-calc.configure(background='gray93')
-calc.geometry("234x332")
-#70+50+2+50+2+50+2+50+2+50+2
 
-operator=""
-text_input= StringVar()
-
-#okno na vysledok
-result=Entry(calc,font=('comicsans', 25), width=12, textvariable=text_input)
-result.place(x=6,y=15)
-
-#####################
-#1.riadok buttonov
-#####################
-button_clear=Button(calc, text='C', fg='maroon',   bg='gray75', font=('comicsans', 12))
-button_clear.config(width=5, height=2)
-button_clear.place(x=4,y=70)
-
-button_div=Button(calc, text='/', fg='maroon',   bg='gray75', font=('comicsans', 12))
-button_div.config(width=5, height=2)
-button_div.place(x=4+55+2,y=70)
-
-button_mul=Button(calc, text='X', fg='maroon',   bg='gray75', font=('comicsans', 12))
-button_mul.config(width=5, height=2)
-button_mul.place(x=4+55+2+55+2,y=70)
-
-button_fact=Button(calc, text='!', fg='maroon',   bg='gray75', font=('comicsans', 12))
-button_fact.config(width=5, height=2)
-button_fact.place(x=4+55+2+55+2+55+2,y=70)
-
-#Button 7
-button_7=Button(calc, text='7', fg='black', bg='gray83', font=('comicsans', 12), command=lambda: main.test(text_input,7))
-button_7.config(width=5, height=2)
-button_7.place(x=4,y=70+50+2)
-
-#Button 8
-button_8=Button(calc, text='8', fg='black',   bg='gray83', font=('comicsans', 12))
-button_8.config(width=5, height=2)
-button_8.place(x=4+55+2,y=70+50+2)
-
-#Button 9
-button_9=Button(calc, text='9', fg='black',   bg='gray83', font=('comicsans', 12))
-button_9.config(width=5, height=2)
-button_9.place(x=4+55+2+55+2,y=70+50+2)
+#Napoveda
+def hint():
+    hint= Toplevel(window)
+    lbl = Label(hint, text="NAPOVEDA!!!!!")
+    lbl.pack()
 
 
-button_pow=Button(calc, text='pow', fg='maroon',   bg='gray75', font=('comicsans', 12))
-button_pow.config(width=5, height=2)
-button_pow.place(x=4+55+2+55+2+55+2,y=70+50+2)
+window = Tk()
+window.title("Kalkulacka")
+window.geometry("276x407")
+window.configure(background='gray26')
 
-#Button 4
-button_4=Button(calc, text='4', fg='black',   bg='gray83', font=('comicsans', 12))
-button_4.config(width=5, height=2)
-button_4.place(x=4,y=70+50+2+50+2)
+text_input=StringVar()
+text_output=StringVar()
 
-#Button 5
-button_5=Button(calc, text='5', fg='black',   bg='gray83', font=('comicsans', 12))
-button_5.config(width=5, height=2)
-button_5.place(x=4+55+2,y=70+50+2+50+2)
+frame = Frame(window)
+frame.place(x=5,y=10)
 
-#Button 6
-button_6=Button(calc, text='6', fg='black',   bg='gray83', font=('comicsans', 12))
-button_6.config(width=5, height=2)
-button_6.place(x=4+55+2+55+2,y=70+50+2+50+2)
+frame2 = Frame(window)
+frame2.configure(background='gray26')
+frame2.place(x=5,y=90)
 
+#medzivysledky - priklady
+result2=Entry(frame, fg= 'white', font=('comicsans', 11), bg = 'gray26', width=33, bd=0, justify='right', textvariable=text_output)
+result2.pack(side = TOP)
 
-button_sqr=Button(calc, text='sqr', fg='maroon',   bg='gray75', font=('comicsans', 12))
-button_sqr.config(width=5, height=2)
-button_sqr.place(x=4+55+2+55+2+55+2,y=70+50+2+50+2)
-
-#Button 1
-button_1=Button(calc, text='1', fg='black',   bg='gray83', font=('comicsans', 12))
-button_1.config(width=5, height=2)
-button_1.place(x=4,y=70+50+2+50+2+50+2)
-
-#Button 2
-button_2=Button(calc, text='2', fg='black',   bg='gray83', font=('comicsans', 12))
-button_2.config(width=5, height=2)
-button_2.place(x=4+55+2,y=70+50+2+50+2+50+2)
-
-#Button 3
-button_3=Button(calc, text='3', fg='black',   bg='gray83', font=('comicsans', 12))
-button_3.config(width=5, height=2)
-button_3.place(x=4+55+2+55+2,y=70+50+2+50+2+50+2)
-
-button_func=Button(calc, text='func', fg='maroon',   bg='gray75', font=('comicsans', 12))
-button_func.config(width=5, height=2)
-button_func.place(x=4+55+2+55+2+55+2,y=70+50+2+50+2+50+2)
-
-#Button napoveda
-button_nap=Button(calc, text='?', fg='black',   bg='gray83', font=('comicsans', 12))
-button_nap.config(width=5, height=2)
-button_nap.place(x=4,y=70+50+2+50+2+50+2+50+2)
-
-#Button 0
-button_0=Button(calc, text='0', fg='black',   bg='gray83', font=('comicsans', 12))
-button_0.config(width=5, height=2)
-button_0.place(x=4+55+2,y=70+50+2+50+2+50+2+50+2)
-
-#Button .point
-button_point=Button(calc, text='.', fg='black',   bg='gray83', font=('comicsans', 12))
-button_point.config(width=5, height=2)
-button_point.place(x=4+55+2+55+2,y=70+50+2+50+2+50+2+50+2)
-
-#Button =
-button_eq=Button(calc, text='=', fg='maroon',   bg='gray75', font=('comicsans', 12))
-button_eq.config(width=5, height=2)
-button_eq.place(x=4+55+2+55+2+55+2,y=70+50+2+50+2+50+2+50+2)
+#input cisel
+result=Entry(frame, fg= 'white',  font=('comicsans', 33), width=11, bg = 'gray26', bd=0, justify='right', textvariable=text_input)
+result.pack(side = BOTTOM)
 
 
 
+#1 riadok
+button_pow=Button(frame2, text='pow', fg='maroon', bg='gray75', font=('comicsans', 12))
+button_pow.config(width=6, height=2, command=lambda: main.pow(text_output))
+button_pow.grid(column=0, row=0, padx= 1, pady= 1)
+
+button_sqrt=Button(frame2, text='sqrt', fg='maroon', bg='gray75', font=('comicsans', 12))
+button_sqrt.config(width=6, height=2, command=lambda: main.sqrt(text_output))
+button_sqrt.grid(column=1, row=0, padx= 1, pady= 1)
+
+button_log=Button(frame2, text='log', fg='maroon', bg='gray75', font=('comicsans', 12))
+button_log.config(width=6, height=2, command=lambda: main.log(text_output))
+button_log.grid(column=2, row=0, padx= 1, pady= 1)
+
+button_hint=Button(frame2, text='?', fg='maroon', bg='gray75', font=('comicsans', 12))
+button_hint.config(width=6, height=2, command=lambda: hint())
+button_hint.grid(column=3, row=0, padx= 1, pady= 1)
+
+#2. riadok
+
+button_clear=Button(frame2, text='C', fg='maroon', bg='gray75', font=('comicsans', 12))
+button_clear.config(width=6, height=2, command=lambda: main.clear(text_input,text_output))
+button_clear.grid(column=0, row=1, padx= 1, pady= 1)
+
+button_div=Button(frame2, text='/', fg='maroon', bg='gray75', font=('comicsans', 12))
+button_div.config(width=6, height=2, command=lambda: main.div(text_output))
+button_div.grid(column=1, row=1, padx= 1, pady= 1)
+
+button_mul=Button(frame2, text='X', fg='maroon', bg='gray75', font=('comicsans', 12))
+button_mul.config(width=6, height=2, command=lambda: main.mul(text_output))
+button_mul.grid(column=2, row=1, padx= 1, pady= 1)
+
+button_fact=Button(frame2, text='!', fg='maroon', bg='gray75', font=('comicsans', 12))
+button_fact.config(width=6, height=2, command=lambda: main.fact(text_output))
+button_fact.grid(column=3, row=1, padx= 1, pady= 1)
+
+#3.riadok
+
+button_7=Button(frame2, text='7', fg='black', bg='gray83', font=('comicsans', 12))
+button_7.config(width=6, height=2, command=lambda: main.digit(text_input,7,text_output))
+button_7.grid(column=0, row=2, padx= 1, pady= 1)
+
+button_8=Button(frame2, text='8', fg='black', bg='gray83', font=('comicsans', 12))
+button_8.config(width=6, height=2, command=lambda: main.digit(text_input,8,text_output))
+button_8.grid(column=1, row=2, padx= 1, pady= 1)
+
+button_9=Button(frame2, text='9', fg='black', bg='gray83', font=('comicsans', 12))
+button_9.config(width=6, height=2, command=lambda: main.digit(text_input,9,text_output))
+button_9.grid(column=2, row=2, padx= 1, pady= 1)
+
+button_min=Button(frame2, text='-', fg='maroon', bg='gray75', font=('comicsans', 12))
+button_min.config(width=6, height=2, command=lambda: main.minus(text_output))
+button_min.grid(column=3, row=2, padx= 1, pady= 1)
+
+# 4. riadok
+
+button_4=Button(frame2, text='4', fg='black', bg='gray83', font=('comicsans', 12))
+button_4.config(width=6, height=2, command=lambda: main.digit(text_input,4,text_output))
+button_4.grid(column=0, row=3, padx= 1, pady= 1)
+
+button_5=Button(frame2, text='5', fg='black', bg='gray83', font=('comicsans', 12))
+button_5.config(width=6, height=2, command=lambda: main.digit(text_input,5,text_output))
+button_5.grid(column=1, row=3, padx= 1, pady= 1)
+
+button_6=Button(frame2, text='6', fg='black', bg='gray83', font=('comicsans', 12))
+button_6.config(width=6, height=2, command=lambda: main.digit(text_input,6,text_output))
+button_6.grid(column=2, row=3, padx= 1, pady= 1)
+
+button_plus=Button(frame2, text='+', fg='maroon', bg='gray75', font=('comicsans', 12))
+button_plus.config(width=6, height=2,command=lambda: main.plus(text_output))
+button_plus.grid(column=3, row=3, padx= 1, pady= 1)
+
+# 5.riadok
+
+button_1=Button(frame2, text='1', fg='black', bg='gray83', font=('comicsans', 12))
+button_1.config(width=6, height=2, command=lambda: main.digit(text_input,1,text_output))
+button_1.grid(column=0, row=4, padx= 1, pady= 1)
+
+button_2=Button(frame2, text='2', fg='black', bg='gray83', font=('comicsans', 12))
+button_2.config(width=6, height=2, command=lambda: main.digit(text_input,2,text_output))
+button_2.grid(column=1, row=4, padx= 1, pady= 1)
+
+button_3=Button(frame2, text='3', fg='black', bg='gray83', font=('comicsans', 12))
+button_3.config(width=6, height=2, command=lambda: main.digit(text_input,3,text_output))
+button_3.grid(column=2, row=4, padx= 1, pady= 1)
+
+button_eq=Button(frame2, text='=', fg='maroon', bg='gray75', font=('comicsans', 12))
+button_eq.config(width=6, height=2, command=lambda: main.solve(text_input))
+button_eq.grid(column=3, row=4, rowspan=2, padx= 1, pady= 1, ipady=26)
+
+# 6.riadok
+
+button_0=Button(frame2, text='0', fg='black', bg='gray83', font=('comicsans', 12))
+button_0.config(width=6, height=2, command=lambda: main.digit(text_input,0,text_output))
+button_0.grid(column=0, row=5, columnspan=2, padx=1, pady= 1, ipadx= 33)
+
+button_point=Button(frame2, text='.', fg='black', bg='gray83', font=('comicsans', 12))
+button_point.config(width=6, height=2,command=lambda: main.digit(text_input,'.',text_output))
+button_point.grid(column=2, row=5, padx= 1, pady= 1)
 
 
 
-
-
-calc.mainloop()
+window.mainloop()
