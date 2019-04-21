@@ -19,7 +19,7 @@
 #	@return vysledek rozdilu, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError nebo Exception)
 
 ##  Multiply(a, b)
-#   Provede a * b a vraci vysledek. Pracuje i se zapornymi a desetinymi cisly.
+#   Provede a ^ b (a na b-tou) a vraci vysledek. Pracuje i se zapornymi a desetinymi cisly.
 #	@brief Aritmeticke krat
 #	@param a prvni operand
 #	@param b druhy operand
@@ -49,8 +49,8 @@
 ##  Odmocnina(x, y)
 #   Provede odmocninu (a^(1/n)) a vraci vysledek. Pracuje s desetinymi cisly.
 #	@brief Obecna odmocnina
-#	@param x zaklad - vetsi jak 0
-#	@param y uroven odmocniny (to, na kolikatou to je odmocnina) - bez omezeni
+#	@param x zaklad - vetsi nebo roven 0, v pripade licheho y muze zaklad byt i zaporny
+#	@param y uroven odmocniny - prirozene cislo
 #	@return vysledek odmocniny, pokud dojde k neocekavanemu stavu ci chybe, vyhodi vyjimku (ValueError u zaklad<=0 nebo Exception)
 
 ##  Log(x)

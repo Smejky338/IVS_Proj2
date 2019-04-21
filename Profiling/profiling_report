@@ -1,0 +1,113 @@
+Vzhledem k nízké náročnosti programu je měření časové náročnosti nepřesné.
+Všechna volání matematických funkcí jsou lineární k počtu vstupních hodnot (N).
+Čtení a Power probíhá Nkrát, Plus 3Nkrát. 
+Ostatní matematické funkce se volají konstantně a zaměřovat se na ně je v tomto případě zbytečné.
+Zaměřit se tedy má smysl na Plus a Power.
+
+#TEST 1000:
+python3 profiling.py <test1000.txt
+0.2848546005620411
+         7037 function calls in 0.047 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     1000    0.000    0.000    0.000    0.000 :0(append)
+        1    0.000    0.000    0.047    0.047 :0(exec)
+     1002    0.000    0.000    0.000    0.000 :0(isinstance)
+        1    0.000    0.000    0.000    0.000 :0(pow)
+        1    0.000    0.000    0.000    0.000 :0(print)
+     1001    0.000    0.000    0.000    0.000 :0(readline)
+        1    0.000    0.000    0.000    0.000 :0(setprofile)
+        4    0.000    0.000    0.000    0.000 :0(utf_8_decode)
+        1    0.000    0.000    0.047    0.047 <string>:1(<module>)
+        4    0.000    0.000    0.000    0.000 codecs.py:318(decode)
+        4    0.000    0.000    0.000    0.000 codecs.py:330(getstate)
+        1    0.000    0.000    0.000    0.000 fileinput.py:188(__init__)
+        1    0.000    0.000    0.000    0.000 fileinput.py:245(__iter__)
+     1001    0.000    0.000    0.000    0.000 fileinput.py:248(__next__)
+        1    0.000    0.000    0.000    0.000 fileinput.py:267(nextfile)
+        2    0.000    0.000    0.000    0.000 fileinput.py:308(_readline)
+        1    0.000    0.000    0.000    0.000 fileinput.py:369(lineno)
+        1    0.000    0.000    0.000    0.000 fileinput.py:83(input)
+        2    0.000    0.000    0.000    0.000 mat_knihovna.py:12(Multiply)
+        2    0.000    0.000    0.000    0.000 mat_knihovna.py:15(Divide)
+     1000    0.000    0.000    0.000    0.000 mat_knihovna.py:30(Power)
+        1    0.000    0.000    0.000    0.000 mat_knihovna.py:36(Odmocnina)
+     3000    0.016    0.000    0.016    0.000 mat_knihovna.py:6(Plus)
+        2    0.000    0.000    0.000    0.000 mat_knihovna.py:9(Minus)
+        0    0.000             0.000          profile:0(profiler)
+        1    0.000    0.000    0.047    0.047 profile:0(stddev.odchylka())
+        1    0.031    0.031    0.047    0.047 stddev.py:13(odchylka)
+
+#TEST 100:
+python3 profiling.py <test100.txt
+0.2741991185401827
+         734 function calls in 0.000 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      100    0.000    0.000    0.000    0.000 :0(append)
+        1    0.000    0.000    0.000    0.000 :0(exec)
+      102    0.000    0.000    0.000    0.000 :0(isinstance)
+        1    0.000    0.000    0.000    0.000 :0(pow)
+        1    0.000    0.000    0.000    0.000 :0(print)
+      101    0.000    0.000    0.000    0.000 :0(readline)
+        1    0.000    0.000    0.000    0.000 :0(setprofile)
+        3    0.000    0.000    0.000    0.000 :0(utf_8_decode)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        3    0.000    0.000    0.000    0.000 codecs.py:318(decode)
+        3    0.000    0.000    0.000    0.000 codecs.py:330(getstate)
+        1    0.000    0.000    0.000    0.000 fileinput.py:188(__init__)
+        1    0.000    0.000    0.000    0.000 fileinput.py:245(__iter__)
+      101    0.000    0.000    0.000    0.000 fileinput.py:248(__next__)
+        1    0.000    0.000    0.000    0.000 fileinput.py:267(nextfile)
+        2    0.000    0.000    0.000    0.000 fileinput.py:308(_readline)
+        1    0.000    0.000    0.000    0.000 fileinput.py:369(lineno)
+        1    0.000    0.000    0.000    0.000 fileinput.py:83(input)
+        2    0.000    0.000    0.000    0.000 mat_knihovna.py:12(Multiply)
+        2    0.000    0.000    0.000    0.000 mat_knihovna.py:15(Divide)
+      100    0.000    0.000    0.000    0.000 mat_knihovna.py:30(Power)
+        1    0.000    0.000    0.000    0.000 mat_knihovna.py:36(Odmocnina)
+      300    0.000    0.000    0.000    0.000 mat_knihovna.py:6(Plus)
+        2    0.000    0.000    0.000    0.000 mat_knihovna.py:9(Minus)
+        0    0.000             0.000          profile:0(profiler)
+        1    0.000    0.000    0.000    0.000 profile:0(stddev.odchylka())
+        1    0.000    0.000    0.000    0.000 stddev.py:13(odchylka)
+
+#TEST 10:
+python3 profiling.py <test10.txt
+1.0768442933456566
+         104 function calls in 0.016 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       10    0.000    0.000    0.000    0.000 :0(append)
+        1    0.000    0.000    0.000    0.000 :0(exec)
+       12    0.000    0.000    0.000    0.000 :0(isinstance)
+        1    0.000    0.000    0.000    0.000 :0(pow)
+        1    0.000    0.000    0.000    0.000 :0(print)
+       11    0.000    0.000    0.000    0.000 :0(readline)
+        1    0.016    0.016    0.016    0.016 :0(setprofile)
+        3    0.000    0.000    0.000    0.000 :0(utf_8_decode)
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        3    0.000    0.000    0.000    0.000 codecs.py:318(decode)
+        3    0.000    0.000    0.000    0.000 codecs.py:330(getstate)
+        1    0.000    0.000    0.000    0.000 fileinput.py:188(__init__)
+        1    0.000    0.000    0.000    0.000 fileinput.py:245(__iter__)
+       11    0.000    0.000    0.000    0.000 fileinput.py:248(__next__)
+        1    0.000    0.000    0.000    0.000 fileinput.py:267(nextfile)
+        2    0.000    0.000    0.000    0.000 fileinput.py:308(_readline)
+        1    0.000    0.000    0.000    0.000 fileinput.py:369(lineno)
+        1    0.000    0.000    0.000    0.000 fileinput.py:83(input)
+        2    0.000    0.000    0.000    0.000 mat_knihovna.py:12(Multiply)
+        2    0.000    0.000    0.000    0.000 mat_knihovna.py:15(Divide)
+       10    0.000    0.000    0.000    0.000 mat_knihovna.py:30(Power)
+        1    0.000    0.000    0.000    0.000 mat_knihovna.py:36(Odmocnina)
+       30    0.000    0.000    0.000    0.000 mat_knihovna.py:6(Plus)
+        2    0.000    0.000    0.000    0.000 mat_knihovna.py:9(Minus)
+        0    0.000             0.000          profile:0(profiler)
+        1    0.000    0.000    0.016    0.016 profile:0(stddev.odchylka())
+        1    0.000    0.000    0.000    0.000 stddev.py:13(odchylka)
