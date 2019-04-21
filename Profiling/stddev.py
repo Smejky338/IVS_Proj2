@@ -1,7 +1,7 @@
 ## @file stddev.py
 # @brief program pro vypocet vyberove smerodatne odchylky z posloupnosti cisel, cte ze stdin az do 1000 cisel(radku). Vyuzit pro profilovani.
 # @author Jan Smejkal, xsmejk27
-# 
+# priklad spusteni: python3 stddev.py <test1000.txt
 import sys
 sys.path.append("..")   #kvuli tomu, ze mat_knihovna je o slozku vyse
 import mat_knihovna as mat
