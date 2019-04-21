@@ -13,6 +13,9 @@ operator=""
 point = False
 
 #Vymazat obsah kalkulacky
+# @brief Vymaze pamat kalkulacky, vynuluje globalne premenne, nastavi program ako pri spusteni
+# @param text_input Okno pre vypis vysledku a jednotlivych vstupnych cisel
+# @param text_output Okno pre priklad
 def clear(text_input,text_output):
     global number
     global number2
