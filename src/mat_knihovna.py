@@ -73,7 +73,7 @@ def Factorial(a):
 # @exception ValueError v pripade, ze "y" nie je prirodzene cislo 
 #
 def Power(x, y):
-    if x<0 or isinstance(x, float):
+    if y<0 or isinstance(y, float):
         raise ValueError("Power pracuje len s prirodzenym exponentom!")
     return x ** y
 
