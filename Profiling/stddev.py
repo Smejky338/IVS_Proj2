@@ -1,15 +1,15 @@
-#program pro vypocet vyberove smerodatne odchylky z posloupnosti cisel, cte ze stdin az do 1000 cisel(radku).
+## @file stddev.py
+# @brief program pro vypocet vyberove smerodatne odchylky z posloupnosti cisel, cte ze stdin az do 1000 cisel(radku). Vyuzit pro profilovani.
+# @author Jan Smejkal, xsmejk27
+# 
 import sys
-sys.path.append("..")#kvuli tomu, ze mat_knihovna je o slozku vyse
+sys.path.append("..")   #kvuli tomu, ze mat_knihovna je o slozku vyse
 import mat_knihovna as mat
-import fileinput
+import fileinput   #kvuli cteni z stdin
 
-#while scan != EOF:
-    #suma1=xi-(aritm.prumer)
-
-#mat_knihovna.Plus()
-
-
+## @fn odchylka
+# @brief vypocita vyberovou smerodatnou odchylku z cisel v stdin
+# vyuziva funkce z mat_knihovna.py
 def odchylka():
     soucet=0
     pole=[]
