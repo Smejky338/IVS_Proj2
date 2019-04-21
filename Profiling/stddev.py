@@ -16,22 +16,18 @@ def odchylka():
     sumax2=0
     pocet=0
     for line in fileinput.input():
-        #print(line)
         pole.append(float(line))
-        #if line)) != line:#chybi overovani vstupu, ze je cislo
-         #   print("neocekavany vstup!")
-          #  return -1
-        soucet += float(line)
-        sumax2 += mat.Power(float(line), 2)#suma(x^2)
-        pocet += 1#N
-
-    prumer = soucet/pocet
+        
+        soucet = mat.Plus(soucet, float(line))
+        sumax2 = mat.Plus(sumax2, mat.Power(float(line), 2))#suma(x^2)
+        pocet = mat.Plus(pocet, 1)#N++
+    prumer = mat.Divide(soucet, pocet)
     
 #                                                   1/N-1                *                  -                       x^2   *   N
     suma = mat.Odmocnina( mat.Multiply(mat.Divide(1, mat.Minus(pocet, 1)), mat.Minus( sumax2, mat.Multiply( pow(prumer , 2), pocet ) ) ), 2 ) #odm(1/N-1 * (sumax2 - N*prumer^2))
     
-    #print("jebo")
     print(suma)
+    return
 
 #volani samotne funkce
-odchylka()
+#odchylka()
