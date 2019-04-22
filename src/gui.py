@@ -10,7 +10,8 @@ def hint():
 
 
 window = Tk()
-window.title("Kalkulacka")
+window.wm_iconbitmap('kalk.ico')
+window.title("Kalkulačka")
 window.geometry("276x407")
 window.configure(background='gray26')
 
