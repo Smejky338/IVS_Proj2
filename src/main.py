@@ -5,12 +5,15 @@ import mat_knihovna as mk
 ##treba obmedzit pocet cislic na vstupe a vystupe
 ## 2+2+2+2
 
-number=""
-number2=""
-x=0
-y=0
-operator=""
-point = False
+#####################################################
+#Premenne ktore reguluju operacie alebo vstupne cisla
+#####################################################
+number=""   #vstupne cislo
+number2=""  #cely vstup - priklad
+x=0     #prve cislo nad ktorym je robena operacia
+y=0     #prve cislo nad ktorym je robena operacia
+operator=""     #urcuje operaciu ktora bude robena nad cislami x a y
+point = False    #reguluje desatinne cisla - moze byt len jedna desatinna ciarka vo vstupnom cisle
 
 #Vymazat obsah kalkulacky
 # @brief Vymaze pamat kalkulacky, vynuluje globalne premenne, nastavi program ako pri spusteni
@@ -32,7 +35,8 @@ def clear(text_input,text_output):
     text_input.set(number)
     text_output.set(number2)
 
-#cinnosti ktore musi kazda operacia nastavit
+#Cinnosti ktore musi kazda operacia nastavit
+# @brief Funkcia spracuje a nastavi "x" hodnotu kalkulacky a vynuluje vstup - teda pripravi kalkulacku na prijatie druheho cisla "y" + vynuluje kontrolu desatinnej ciarky resp. bodky
 def operation():
     global number 
     global x
@@ -41,7 +45,9 @@ def operation():
     x = int(number)
     number= ""
 
-
+# @brief Funckia spracovava vstupne cislice - stlacenia buttonov - do jedneho cisla 
+# @param text_input Urcuje do ktoreho okna sa vypisuje cislo s ktorym nasledne budu robene operacie
+# @param text_output Urcuje do ktoreho okna sa vypisuje priklad - cely vstup prikladu aj s operandom 
 def digit(text_input, num, text_output):
     global point
     global number
@@ -59,7 +65,8 @@ def digit(text_input, num, text_output):
             point= True
 
 
-
+# @brief  Funkcia ktora pripravi x na scitanie s druhym cislom y (ocakava sa zadanie y)
+# @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena
 def plus(text_output):
     operation()
     global operator
@@ -67,7 +74,9 @@ def plus(text_output):
     global number2
     number2 = number2 + " + "
     text_output.set(number2)
-        
+
+# @brief  Funkcia ktora pripravi x (nastavi prislusny operand) na odcitanie s druhym cislom y (ocakava sa zadanie y)
+# @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena        
 def minus(text_output):
     operation()
     global operator
@@ -76,6 +85,8 @@ def minus(text_output):
     number2 = number2 + " - "
     text_output.set(number2)
 
+# @brief  Funkcia ktora pripravi x (nastavi prislusny operand) na nasobenie s druhym cislom y (ocakava sa zadanie y)
+# @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena
 def mul(text_output):
     operation()
     global operator
@@ -84,6 +95,8 @@ def mul(text_output):
     number2 = number2 + " x "
     text_output.set(number2)
 
+# @brief  Funkcia ktora pripravi x (nastavi prislusny operand) na delenie s druhym cislom y (ocakava sa zadanie y)
+# @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena
 def div(text_output):
     operation()
     global operator
@@ -92,6 +105,9 @@ def div(text_output):
     number2 = number2 + " / "
     text_output.set(number2)
 
+
+# @brief  Funkcia ktora pripravi x (nastavi prislusny operand) na umocnenie druhym cislom y (ocakava sa zadanie y)
+# @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena
 def pow(text_output):
     operation()
     global operator
@@ -100,6 +116,9 @@ def pow(text_output):
     number2 = number2 + " ^ "
     text_output.set(number2)
 
+
+# @brief  Funkcia ktora pripravi x (nastavi prislusny operand) na odmocnenie druhym cislom y (ocakava sa zadanie y)
+# @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena
 def sqrt(text_output):
     operation()
     global operator
@@ -108,6 +127,9 @@ def sqrt(text_output):
     number2 = number2 + " sqrt "
     text_output.set(number2)
 
+
+# @brief  Funkcia ktora pripravi x na operaciu log (nastavi prislusny operand)
+# @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena
 def log(text_output):
     operation()
     global operator
@@ -116,6 +138,9 @@ def log(text_output):
     number2 = number2 + " log "
     text_output.set(number2)
 
+
+# @brief  Funkcia ktora pripravi x na operaciu factorial (nastavi prislusny operand)
+# @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena
 def fact(text_output):
     operation()
     global operator
@@ -126,7 +151,8 @@ def fact(text_output):
     global number
     number = 0
 
-
+# @brief Funkcia najprv spracuje - nastavi cislo "y" a nasledne riesi zadany priklad podla nastaveneho operandu
+# @param text_input Urcuje okno do ktoreho ma byt vypisany vysledok  
 def solve(text_input):
     global x
     global number
