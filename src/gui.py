@@ -25,11 +25,11 @@ frame2.configure(background='gray26')
 frame2.place(x=5,y=90)
 
 #medzivysledky - priklady
-result2=Entry(frame, fg= 'white', font=('comicsans', 11), bg = 'gray26', width=33, bd=0, justify='right', textvariable=text_output)
+result2=Entry(frame, disabledforeground= 'white', font=('comicsans', 11), disabledbackground = 'gray26', width=33, bd=0, justify='right', textvariable=text_output, state='disabled')
 result2.pack(side = TOP)
 
 #input cisel
-result=Entry(frame, fg= 'white',  font=('comicsans', 33), width=11, bg = 'gray26', bd=0, justify='right', textvariable=text_input)
+result=Entry(frame, disabledforeground= 'white',  font=('comicsans', 33), width=11,disabledbackground = 'gray26', bd=0, justify='right', textvariable=text_input, state='disabled')
 result.pack(side = BOTTOM)
 
 
