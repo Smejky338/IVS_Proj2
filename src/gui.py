@@ -12,7 +12,7 @@ def hint():
 window = Tk()
 window.wm_iconbitmap('kalk.ico')
 window.title("Kalkulačka")
-window.geometry("276x407")
+window.geometry("274x407")
 window.configure(background='gray26')
 
 text_input=StringVar()
