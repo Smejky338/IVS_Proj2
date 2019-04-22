@@ -3,7 +3,7 @@ import mat_knihovna as mk
 #osetrenie nespravnych vstupov pri factiorial...
 ## pri velkych vysledkoch pise mimo okna
 ##treba obmedzit pocet cislic na vstupe a vystupe
-# ked raz pouzijem float tak to uz vzdy hadze vysledky floatu aj ak pouzijem druhy krat integer
+# 2.1 + 2.2 = x a potom ! tak ma hodit chybu
 
 #####################################################
 #Premenne ktore reguluju operacie alebo vstupne cisla
@@ -24,11 +24,11 @@ sol = False
 # @return n Vracia cislo - bud int alebo float 
 def num_type(n):
     try:
-        num = float(n)
+        num = int(n)
     except ValueError:
-        return int(n)
-    else:
         return float(n)
+    else:
+        return int(n)
 
 ##
 #Vymazat obsah kalkulacky
