@@ -120,7 +120,7 @@ def digit(text_input, num, text_output):
                 point= True
         counter= counter + 1
 
-##
+## 
 # @brief  Funkcia ktora pripravi x na scitanie s druhym cislom y (ocakava sa zadanie y)
 # @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena
 def plus(text_output):
