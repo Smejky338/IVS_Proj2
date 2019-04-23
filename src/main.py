@@ -4,6 +4,8 @@ import mat_knihovna as mk
 ## pri velkych vysledkoch pise mimo okna
 ##treba obmedzit pocet cislic na vstupe a vystupe
 # 2.1 + 2.2 = x a potom ! tak ma hodit chybu
+# 8/3 = x 5 -- zly vysledok
+# nefunguje operacia bez x 
 
 #####################################################
 #Premenne ktore reguluju operacie alebo vstupne cisla
@@ -259,7 +261,7 @@ def solve(text_input):
                 number = ""
             else:
                 text_input.set(result)
-                number = result
+                number = str(result)
         y = 0
         x = 0
         operator=""
