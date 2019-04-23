@@ -13,6 +13,7 @@ run: gui.py
 pack: clean doc
 	mkdir ../../doc
 	mv ../doc/html ../../doc
+	rm -r ../doc
 	mkdir ../../installer
 	cp ../../setup_kalk.exe ../../installer
 	mkdir ../../repo
