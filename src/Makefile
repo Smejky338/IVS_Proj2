@@ -14,12 +14,12 @@ pack: clean doc
 	mkdir ../../doc
 	mv ../doc/html ../../doc
 	rm -r ../doc
-	mkdir ../../installer
-	cp ../../setup_kalk.exe ../../installer
+	mkdir ../../install
+	cp ../../setup_kalk.exe ../../install
 	mkdir ../../repo
 	cp -r ../* ../../repo
 	mkdir ../../xsmejk27_xdvora2z_xsvitk00_xkonde04
-	mv ../../repo ../../doc ../../installer ../../xsmejk27_xdvora2z_xsvitk00_xkonde04
+	mv ../../repo ../../doc ../../install ../../xsmejk27_xdvora2z_xsvitk00_xkonde04
 	zip -r ../../xsmejk27_xdvora2z_xsvitk00_xkonde04.zip ../../xsmejk27_xdvora2z_xsvitk00_xkonde04
 	
 	
