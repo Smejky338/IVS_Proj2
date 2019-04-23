@@ -1,11 +1,9 @@
 ## @file test_mat_knihovna.py
-# @brief Modul pro backend cast kalkulacky a linkovani s matematickou knihovnou
-# @author Veronika Svítková xsvitk00 
+# @brief Modul testovani matematicke knihovny (TDD)
+# @author Veronika Svítková xsvitk00, xdvora2z Josef Dvořák
 # @date April 2019
-# spusteni sa pres prikazovy radek prikazem make
-
-#Spusteni pres prikazovou radku:
-#pytest [Param] test_mat_knihovna.py 
+# Spusteni pres prikazovou radku:
+# pytest [Param] test_mat_knihovna.py 
 
 import mat_knihovna
 import pytest
