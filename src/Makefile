@@ -10,10 +10,22 @@ run: gui.py
 	python gui.py
 
 #todo zabali projekt na odovzdanie
-pack:
+pack: clean doc
+	mkdir ../../doc
+	mv ../doc/html ../../doc
+	mkdir ../../installer
+	cp ../../setup_kalk.exe ../../installer
+	mkdir ../../repo
+	cp -r ../* ../../repo
+	mkdir ../../xsmejk27_xdvora2z_xsvitk00_xkonde04
+	mv ../../repo ../../doc ../../installer ../../xsmejk27_xdvora2z_xsvitk00_xkonde04
+	zip -r ../../xsmejk27_xdvora2z_xsvitk00_xkonde04.zip ../../xsmejk27_xdvora2z_xsvitk00_xkonde04
+	
+	
 
 #todo zmaze subory co nemaju byt odovzdane
-clean:
+clean:	
+	rm -rf ../__pycache__
 
 #todo
 doc:
