@@ -1,3 +1,8 @@
+## @file gui.py
+# @brief Modul pro zobrazeni okna kalkulacky a tlacitek
+# @author Ondrej Kondek xkonde04
+# @date April 2019
+
 from tkinter import *
 import main
 

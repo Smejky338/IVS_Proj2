@@ -1,3 +1,9 @@
+## @file test_mat_knihovna.py
+# @brief Modul pro backend cast kalkulacky a linkovani s matematickou knihovnou
+# @author Veronika Svítková xsvitk00 
+# @date April 2019
+# spusteni sa pres prikazovy radek prikazem make
+
 #Spusteni pres prikazovou radku:
 #pytest [Param] test_mat_knihovna.py 
 

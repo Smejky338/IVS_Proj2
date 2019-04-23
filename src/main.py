@@ -1,11 +1,16 @@
-import mat_knihovna as mk
-
-#osetrenie nespravnych vstupov pri factiorial...
-## pri velkych vysledkoch pise mimo okna
-##treba obmedzit pocet cislic na vstupe a vystupe
+## @file main.py
+# @brief Modul pro backend cast kalkulacky a linkovani s matematickou knihovnou
+# @author Ondrej Kondek xkonde04
+# @date April 2019
+# osetrenie nespravnych vstupov pri factiorial...
+# pri velkych vysledkoch pise mimo okna
+# treba obmedzit pocet cislic na vstupe a vystupe
 # 2.1 + 2.2 = x a potom ! tak ma hodit chybu
 # 8/3 = x 5 -- zly vysledok
 # nefunguje operacia bez x 
+
+import mat_knihovna as mk
+
 
 
 ## DEBUGGING ... 
