@@ -15,15 +15,23 @@ import mat_knihovna as mk
 #####################################################
 #Premenne ktore reguluju operacie alebo vstupne cisla
 #####################################################
-number=""   ##vstupne cislo
-number2="" ##cely vstup - priklad
-x=0     ##prve cislo nad ktorym je robena operacia (operand)
-y=0     ##prve cislo nad ktorym je robena operacia (operand)
-operator=""     ##urcuje operaciu ktora bude robena nad cislami x a y
-point = False   ##reguluje desatinne cisla - moze byt len jedna desatinna ciarka vo vstupnom cisle
+##vstupne cislo
+number=""  
+##cely vstup - priklad 
+number2="" 
+##prve cislo nad ktorym je robena operacia (operand)
+x=0     
+##prve cislo nad ktorym je robena operacia (operand)
+y=0     
+##urcuje operaciu ktora bude robena nad cislami x a y
+operator=""  
+##reguluje desatinne cisla - moze byt len jedna desatinna ciarka vo vstupnom cisle   
+point = False
 sol = False     
-counter = 1 #counter na velkost cisla
-error = False   ##pro zaznam chyby
+#counter na velkost cisla
+counter = 1
+##pro zaznam chyby
+error = False   
 
 ##
 # @brief Funkcia zahlasi ERROR a pripravi kalkulacku na opatovne pouzitie
