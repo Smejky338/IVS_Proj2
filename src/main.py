@@ -2,31 +2,28 @@
 # @brief Modul pro backend cast kalkulacky a linkovani s matematickou knihovnou
 # @author Ondrej Kondek xkonde04
 # @date April 2019
-# osetrenie nespravnych vstupov pri factiorial...
-# pri velkych vysledkoch pise mimo okna
-# treba obmedzit pocet cislic na vstupe a vystupe
-# 2.1 + 2.2 = x a potom ! tak ma hodit chybu
-# 8/3 = x 5 -- zly vysledok
-# nefunguje operacia bez x 
+# @todo osetrenie nespravnych vstupov pri factiorial...
+# @todo pri velkych vysledkoch pise mimo okna
+# @todo treba obmedzit pocet cislic na vstupe a vystupe
+# @todo 2.1 + 2.2 = x a potom ! tak ma hodit chybu
+# @todo 8/3 = x 5 -- zly vysledok
+# @todo nefunguje operacia bez x 
 
 import mat_knihovna as mk
 
 
-
-## DEBUGGING ... 
-
 #####################################################
 #Premenne ktore reguluju operacie alebo vstupne cisla
 #####################################################
-number=""   #vstupne cislo
-number2=""  #cely vstup - priklad
-x=0     #prve cislo nad ktorym je robena operacia
-y=0     #prve cislo nad ktorym je robena operacia
-operator=""     #urcuje operaciu ktora bude robena nad cislami x a y
-point = False    #reguluje desatinne cisla - moze byt len jedna desatinna ciarka vo vstupnom cisle
-sol = False
+number=""   ##vstupne cislo
+number2="" ##cely vstup - priklad
+x=0     ##prve cislo nad ktorym je robena operacia (operand)
+y=0     ##prve cislo nad ktorym je robena operacia (operand)
+operator=""     ##urcuje operaciu ktora bude robena nad cislami x a y
+point = False   ##reguluje desatinne cisla - moze byt len jedna desatinna ciarka vo vstupnom cisle
+sol = False     
 counter = 1 #counter na velkost cisla
-error = False
+error = False   ##pro zaznam chyby
 
 ##
 # @brief Funkcia zahlasi ERROR a pripravi kalkulacku na opatovne pouzitie
