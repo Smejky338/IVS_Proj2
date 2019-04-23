@@ -1,0 +1,5 @@
+Vzhledem k nízké náročnosti programu je měření časové náročnosti nepřesné.
+Všechna volání matematických funkcí jsou lineární k počtu vstupních hodnot (N).
+Čtení a Power probíhá Nkrát, Plus 3Nkrát. 
+Ostatní matematické funkce se volají konstantně a zaměřovat se na ně je v tomto případě zbytečné.
+Zaměřit se tedy má smysl na Plus a Power.
