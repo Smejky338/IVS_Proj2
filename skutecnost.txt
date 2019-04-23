@@ -1,0 +1,6 @@
+Z termínů jsme stihli akorát první 2 a poslední 3.
+Nebyly splněny z mnoha důvodů: nadměrné vytížení u ostatních předmětů
+Původní rozdělení úloh nebylo reálné a rovnoměrné. Nejhůře odhadnuté bylo linkování GUI, které trvalo násobně více času, než jsme očekávali.
+Kvůli tomu byly úlohy přerozdělené.
+Z komunikačních kanálů byl nakonec použit ten méně vhodný - společná skupina na Messengeru. V tomto relativně malém projektu stačil, u většího by byl problém.
+Discord byl sice zprovozněn, ale nepoužívali jsme jej.

@@ -1,3 +1,8 @@
+## @file xdvora2z_xkonde04_xsvitk00_xsmejk27.txt
+# @brief plán projektu 2 IVS
+# @author: xsmejk27
+# @date March 2019
+
 zadání: http://ivs.fit.vutbr.cz/projekt-2_tymova_spoluprace2018-19.html
 jazyk: Python3
 jazyk dokumentace: CZ/SK

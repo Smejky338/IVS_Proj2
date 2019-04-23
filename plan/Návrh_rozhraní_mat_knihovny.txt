@@ -1,7 +1,9 @@
-#navrh rozhrani mat.knihovny, IVS Proj2
-#@author: xsmejk27, xsvitk00
-#pozn. k @return - vyjimky u trivialit jako plus asi nenastanou, nebo ano?
+## @file Návrh_rozhraní_mat_knihovny.txt
+# @brief navrh rozhrani matematicke knihovny, IVS Proj2
+# @author: xsmejk27, xsvitk00
 # v Pythonu 3+(mozna uz 2.4+) nemusime resit pouzivani long/int - resi se to samo
+# @date April 2019
+
 
 
 ##  Plus(a, b)

@@ -1,7 +1,8 @@
-# Makefile
-# spusta sa cez prikazovy riadok prikazom make
-
-
+## @file Makefile
+# @brief makefile - k jednoduchemu spusteni casti programu, zabaleni, vycisteni, testovani, ..
+# @author Veronika Svítková xsvitk00 
+# @date April 2019
+# spusteni sa pres prikazovy radek prikazem make
 
 all: run
 

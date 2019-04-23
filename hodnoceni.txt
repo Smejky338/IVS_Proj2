@@ -1,0 +1,4 @@
+xsmejk27 110 (rozhraní matematické knihovny, profiling, už.přírůčka)
+xsvitk00 130 (rozhraní matematické knihovny, implementace matematické knihovny, mockup GUI, doxygen, makefile)
+xkonde04 130 (linkování s GUI, GUI, nápověda v GUI, instalátor)
+xdvora2z 30 (testy, README)

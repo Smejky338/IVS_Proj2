@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src"
   ],
-  "SelectedNode": "\\mat_knihovna.py",
+  "SelectedNode": "\\src\\kalk.ico",
   "PreviewInSolutionExplorer": false
 }
