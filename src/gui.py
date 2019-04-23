@@ -5,7 +5,7 @@ import main
 #Napoveda
 def hint():
     hint= Toplevel(window)
-    lbl = Label(hint, text="NAPOVEDA!!!!!")
+    lbl = Label(hint, justify='left', text="Nápověda \n 1. zadejte první číslo k počítání (operand) – může i nemusí být desetinné, k rozdělení na desetinnou část použijte tlačítko “.“ (v posledním řádku) \n 2. zadejte znak činnosti (operátor) - “log rt log / X ! - +“ \n 3. pouze po zadání operátorů pro 2 čísla ( / X ! - + pow ) -  zadejte druhé číslo – pouze kladná čísla, mohou být desetinná \n 4. klikněte na \"=\" pro vypočítání")
     lbl.pack()
 
 
@@ -40,7 +40,7 @@ button_pow=Button(frame2, text='pow', fg='maroon', bg='gray75', font=('comicsans
 button_pow.config(width=6, height=2, command=lambda: main.pow(text_output))
 button_pow.grid(column=0, row=0, padx= 1, pady= 1)
 
-button_sqrt=Button(frame2, text='sqrt', fg='maroon', bg='gray75', font=('comicsans', 12))
+button_sqrt=Button(frame2, text='rt', fg='maroon', bg='gray75', font=('comicsans', 12))
 button_sqrt.config(width=6, height=2, command=lambda: main.sqrt(text_output))
 button_sqrt.grid(column=1, row=0, padx= 1, pady= 1)
 

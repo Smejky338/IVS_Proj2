@@ -7,6 +7,9 @@ import mat_knihovna as mk
 # 8/3 = x 5 -- zly vysledok
 # nefunguje operacia bez x 
 
+
+## DEBUGGING ... 
+
 #####################################################
 #Premenne ktore reguluju operacie alebo vstupne cisla
 #####################################################
@@ -111,101 +114,115 @@ def digit(text_input, num, text_output):
 # @brief  Funkcia ktora pripravi x na scitanie s druhym cislom y (ocakava sa zadanie y)
 # @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena
 def plus(text_output):
-    global operator 
-    if operator == "":
-        operation()
-        operator = "+"
-        global number2
-        number2 = number2 + " + "
-        text_output.set(number2)
+    global number
+    if number != "": 
+        global operator 
+        if operator == "":
+            operation()
+            operator = "+"
+            global number2
+            number2 = number2 + " + "
+            text_output.set(number2)
 
 ##
 # @brief  Funkcia ktora pripravi x (nastavi prislusny operand) na odcitanie s druhym cislom y (ocakava sa zadanie y)
 # @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena        
 def minus(text_output):
-    global operator 
-    if operator == "":
-        operation()
-        operator = "-"
-        global number2
-        number2 = number2 + " - "
-        text_output.set(number2)
+    global number
+    if number != "": 
+        global operator 
+        if operator == "":
+            operation()
+            operator = "-"
+            global number2
+            number2 = number2 + " - "
+            text_output.set(number2)
 
 ##
 # @brief  Funkcia ktora pripravi x (nastavi prislusny operand) na nasobenie s druhym cislom y (ocakava sa zadanie y)
 # @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena
 def mul(text_output):
-    global operator 
-    if operator == "":
-        operation()
-        operator = "x"
-        global number2
-        number2 = number2 + " x "
-        text_output.set(number2)
+    global number
+    if number != "": 
+        global operator 
+        if operator == "":
+            operation()
+            operator = "x"
+            global number2
+            number2 = number2 + " x "
+            text_output.set(number2)
 
 ##
 # @brief  Funkcia ktora pripravi x (nastavi prislusny operand) na delenie s druhym cislom y (ocakava sa zadanie y)
 # @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena
 def div(text_output):
-    global operator 
-    if operator == "":
-        operation()
-        operator = "/"
-        global number2
-        number2 = number2 + " / "
-        text_output.set(number2)
+    global number
+    if number != "": 
+        global operator 
+        if operator == "":
+            operation()
+            operator = "/"
+            global number2
+            number2 = number2 + " / "
+            text_output.set(number2)
 
 ##
 # @brief  Funkcia ktora pripravi x (nastavi prislusny operand) na umocnenie druhym cislom y (ocakava sa zadanie y)
 # @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena
 def pow(text_output):
-    global operator 
-    if operator == "":
-        operation()
-        operator = "^"
-        global number2
-        number2 = number2 + " ^ "
-        text_output.set(number2)
+    global number
+    if number != "": 
+        global operator 
+        if operator == "":
+            operation()
+            operator = "^"
+            global number2
+            number2 = number2 + " ^ "
+            text_output.set(number2)
 
 ##
 # @brief  Funkcia ktora pripravi x (nastavi prislusny operand) na odmocnenie druhym cislom y (ocakava sa zadanie y)
 # @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena
 def sqrt(text_output):
-    global operator 
-    if operator == "":
-        operation()
-        operator = "sqrt"
-        global number2
-        number2 = number2 + " sqrt "
-        text_output.set(number2)
+    global number
+    if number != "": 
+        global operator 
+        if operator == "":
+            operation()
+            operator = "sqrt"
+            global number2
+            number2 = number2 + " sqrt "
+            text_output.set(number2)
 
 ##
 # @brief  Funkcia ktora pripravi x na operaciu log (nastavi prislusny operand)
 # @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena
 def log(text_output):
-    global operator 
-    if operator == "":
-        operation()
-        operator = "log"
-        global number2
-        number2 = number2 + " log "
-        text_output.set(number2)
-        global number
-        number = 0
+    global number
+    if number != "": 
+        global operator 
+        if operator == "":
+            operation()
+            operator = "log"
+            global number2
+            number2 = number2 + " log "
+            text_output.set(number2)
+            number = "0"
 
 ##
 # @brief  Funkcia ktora pripravi x na operaciu factorial (nastavi prislusny operand)
 # @param text_output Urcuje okno do ktoreho je vypisane cislo x a dana operacia ktora bude robena
 def fact(text_output):
-    global operator 
-    if operator == "":
-        operation()
-        operator = "!"
-        global number2
-        number2 = number2 + " ! "
-        text_output.set(number2)
-        global number
-        number = 0
+    global number
+    if number != "": 
+        global operator 
+        if operator == "":
+            operation()
+            operator = "!"
+            global number2
+            number2 = number2 + " ! "
+            text_output.set(number2)
+            number = "0"
 
 ##
 # @brief Funkcia najprv spracuje - nastavi cislo "y" a nasledne riesi zadany priklad podla nastaveneho operandu
@@ -249,7 +266,7 @@ def solve(text_input):
             else:
                 result = mk.Log(x)
         if operator == '!':
-            if y>990 or y<0:
+            if x>990 or x<0 or isinstance(x, float):
                 ERROR(text_input)
             else:
                 result = mk.Factorial(x)
