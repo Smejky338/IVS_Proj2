@@ -1,3 +1,4 @@
+Skupinový projekt do předmětu IVS, FIT VUT Brno
 ### Prostředí
 Windows 10 64bit
 
